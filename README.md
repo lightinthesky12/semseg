@@ -5,7 +5,8 @@ This script is designed to write a confusion matrix file and metrics report file
 
 To run the script, from the root directory, run:
 
-`python main.py --outdir <OUTPUT_DIRECTORY>`
+1. `source venv/bin/activate`
+2. `python main.py --outdir <OUTPUT_DIRECTORY>`
 
 The script also takes two additional optional arguments:
 

@@ -17,6 +17,8 @@ def calc_confusion(labels, inference, num_classes):
 
     """
     assert (labels.shape == inference.shape)
+    assert np.all((labels < num_classes) | (labels == 255))
+    assert np.all((inference < num_classes) | (inference == 255))
 
     # prepopulate matrix with zeros
     result = np.zeros((num_classes, num_classes), dtype=int)
