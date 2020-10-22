@@ -1,5 +1,5 @@
 from semseg import constants
-import json
+import os
 
 OUTFILE_TEMPLATE = "{outdir}/{image_id}_{type}.json"
 
@@ -36,6 +36,7 @@ def format_report(metrics, invalid):
 def write_report(outdir, image_id, type, contents):
     """Writes contents to file in  specified directory.
     """
+    assert os.path.exists(outdir)
     matrix_file = OUTFILE_TEMPLATE.format(outdir=outdir, image_id=image_id, type=type)
     with open(matrix_file, 'w') as f:
         f.write(contents)
