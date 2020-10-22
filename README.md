@@ -5,8 +5,26 @@ This script is designed to write a confusion matrix file and metrics report file
 
 To run the script, from the root directory, run:
 
-1. `source venv/bin/activate`
-2. `python main.py --outdir <OUTPUT_DIRECTORY>`
+1. Install virtualenv if not installed.
+   
+   `pip install virtualenv`
+2. Create a virtualenv. From the root directory,
+
+    `virtualenv venv`
+
+3. Activate venv.
+
+    `source venv/bin/activate`
+4. Install dependencies.
+
+    `pip3 install -r requirements.txt`
+5. Run script.
+
+    `python main.py --outdir <OUTPUT_DIRECTORY>`
+6. When done, deactivate venv.
+
+    `deactivate`
+    
 
 The script also takes two additional optional arguments:
 
